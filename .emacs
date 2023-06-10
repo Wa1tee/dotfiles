@@ -1,7 +1,4 @@
 
-
-
-
 ;; .emacs
 
 (custom-set-variables

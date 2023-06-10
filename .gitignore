@@ -1,5 +1,14 @@
-*
+/*
 !.gitignore
+!README.md
+
+# Emacs
 !.emacs
+
+# Shell environments
 !.bashrc
-!.config/nvim/*
+!.mytcsh
+
+# NeoVim
+!**/.config/nvim
+
