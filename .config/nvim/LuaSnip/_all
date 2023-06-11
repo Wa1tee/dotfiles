@@ -1,0 +1,49 @@
+local ls = require("luasnip")
+local s = ls.snippet
+local t = ls.text_node
+local i = ls.insert_node
+local r = require("luasnip.extras").rep
+
+-- Place this in ${HOME}/.config/nvim/LuaSnip/all.lua
+return {
+  -- A snippet that expands the trigger "hi" into the string "Hello, world!".
+  require("luasnip").snippet(
+    { trig = "hi" },
+    { t("Hello, world!") }
+  ),
+
+  -- To return multiple snippets, use one `return` statement per snippet file
+  -- and return a table of Lua snippets.
+  require("luasnip").snippet(
+    { trig = "foo" },
+    { t("Another snippet.") }
+  ),
+    
+  require("luasnip").snippet(
+    { trig = "test" },
+    { 
+        t({"    test1",
+            "test2",
+            "test3"
+        }),
+    }
+  ),
+
+  s("snip", {
+    t({ "s(\"\",{",
+        "  t({",
+        "    \"\",",
+        "  }),",
+        "}),",
+    })
+  }),
+  s("for", {
+    t({
+      "for(int i=; i< ; i++)",
+      "{",
+      "    ",
+      "}"
+    }),
+  }),
+}
+

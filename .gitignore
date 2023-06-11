@@ -6,7 +6,17 @@
 !.emacs.d
 .emacs.d/*
 !.emacs.d/init.el
+
 # Shell environments
 !.bashrc
 !.mytcsh
+
+# Neovim
+!.config/
+.config/*
+!.config/nvim/
+.config/nvim/autoload/
+.config/nvim/sessions/
+.config/nvim/v:null/
+
 
