@@ -1,21 +1,6 @@
-
-;; .emacs
-
-(custom-set-variables
- ;; uncomment to always end a file with a newline
- ;'(require-final-newline t)
- ;; uncomment to disable loading of "default.el" at startup
- ;'(inhibit-default-init t)
- ;; default to unified diffs
- '(diff-switches "-u"))
-
-;;; uncomment for CJK utf-8 support for non-Asian users
-;; (require 'un-define)
-
-;; Define the init file
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(when (file-exists-p custom-file)
-  (load custom-file))
+;;; Your configuration goes below this line.
+;;; use-package is already loaded and ready to go!
+;;; use-package docs: https://github.com/jwiegley/use-package
 
 ;; Define and initialise package repositories
 (require 'package)
@@ -45,6 +30,21 @@
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(evil use-package undo-tree)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; Visual bell
+(setq visible-bell t)
 
 ;; Indentation guides
 (unless (package-installed-p 'highlight-indent-guides)

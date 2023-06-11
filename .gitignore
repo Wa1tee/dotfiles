@@ -3,12 +3,10 @@
 !README.md
 
 # Emacs
-!.emacs
-
+!.emacs.d
+.emacs.d/*
+!.emacs.d/init.el
 # Shell environments
 !.bashrc
 !.mytcsh
-
-# NeoVim
-!**/.config/nvim
 
