@@ -10,7 +10,7 @@
                                     (if (gnutls-available-p) "s" ""))))
 (package-initialize)
 
-;; use-package to simplify the config file
+;; Use-package to simplify the config file
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -51,6 +51,7 @@
   (package-install 'highlight-indent-guides))
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
+(highlight-indent-guides-method 'character)
 (use-package monokai-pro-theme
   :ensure t
   :config
