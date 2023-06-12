@@ -1,0 +1,31 @@
+[user]
+	name = John Doe
+	email = john.doe@domain.com
+[push]
+	default = simple
+[diff]
+	tool = nvimdiff
+[difftool]
+  prompt = false
+[core]
+	editor = nvim
+[alias]
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  # lol = "!git log --oneline --graph --decorate | perl -pe '$cols = qx(tput cols);chomp $cols;$cols-=5;s/(.{0,$cols}).*/$1/' | less"
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	co = checkout
+	br = branch
+  lg =  log --graph --decorate --pretty=oneline --abbrev-commit --all -10
+  l20 =  log --graph --decorate --pretty=oneline --abbrev-commit --all -20
+  log10 =  log --graph --decorate --pretty=medium --abbrev-commit -10
+	st = status
+[color "decorate"]
+	tag = green
+[merge]
+	tool = nvimdiff
+# [commit]
+#  template = ~/.gitmessage
+[color]
+	ui = auto
+[pull]
+	rebase = false
