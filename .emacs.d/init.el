@@ -97,4 +97,7 @@
 
 (use-package magit)
 
-
+;; If icons look bad, run M-x nerd-icons-install-fonts
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 15))
