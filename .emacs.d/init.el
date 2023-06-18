@@ -5,6 +5,7 @@
 ;; Define and initialise package repositories
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 (add-to-list 'package-archives
              (cons "nongnu" (format "http%s://elpa.nongnu.org/nongnu/"
                                     (if (gnutls-available-p) "s" ""))))
@@ -16,6 +17,15 @@
   (package-install 'use-package))
 (require 'use-package)
 (setq use-package-always-ensure 't)
+
+;; Maximize screen on startup
+(add-hook 'window-setup-hook 'toggle-frame-maximized t)
+;; Disable startup menu
+(menu-bar-mode -1)
+;; Disable tool bar
+(tool-bar-mode -1)
+;; Disable scroll bar
+(scroll-bar-mode -1)
 
 
 ;; Download Evil
@@ -40,7 +50,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(highlight-indent-guides-method 'character)
- '(package-selected-packages '(evil use-package undo-tree)))
+ '(package-selected-packages
+   '(magit projectile evil use-package undo-tree))
+ '(warning-suppress-types '((use-package))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -57,8 +69,32 @@
 (global-display-line-numbers-mode)
 (global-hl-line-mode 1)
 
+;; Disable line numbering for some modes
+(dolist (mode '(org-mode-hook
+		term-mode-hook
+		shell-mode-hook
+		eshell-mode-hook))
+  (add-hook mode (lambda() (display-line-numbers-mode 0))))
+
 ;; (push '(direx:direx-mode :position left :width 25 :dedicated t)
 ;;       popwin:special-display-config)
 ;; (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
 
 (right-click-context-mode 1)
+
+
+(electric-pair-mode 1)
+
+(use-package projectile
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
+  :init
+  (when (file-directory-p "~/Projects/Code")
+    (setq projectile-project-search-path '("~/Projects/Code")))
+  (setq projectile-switch-project-action #'projectile-dired))
+
+(use-package magit)
+
+
