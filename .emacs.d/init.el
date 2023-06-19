@@ -101,3 +101,15 @@
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode 15))
+
+add-hook 'prog-mode-hook 'highlight-numbers-mode)
+(show-paren-mode 1)
+
+(use-package highlight-parentheses
+  :ensure t)
+
+(require 'highlight-parentheses)
+(add-hook 'prog-mode-hook #'highlight-parentheses-mode)
+(add-hook 'prog-mode-hook 'highlight-operators-mode)
+(set-face-foreground 'highlight-operators-face "#ff6188")
+
