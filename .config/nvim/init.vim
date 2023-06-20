@@ -10,36 +10,37 @@ call plug#begin()
   Plug 'numToStr/Comment.nvim'
   Plug 'lukas-reineke/indent-blankline.nvim'
 
-	Plug 'vimwiki/vimwiki'
+  Plug 'vimwiki/vimwiki'
 
   " Plug 'nvim-neorg/neorg'
-
+  
+  Plug 'ahmedkhalf/project.nvim'
 
   " Plug 'hari-rangarajan/CCTree/'
   " Plug 'yegappan/taglist'
   " Plug 'dhananjaylatkar/cscope_maps.nvim'
 
 
-	" CSV
-	Plug 'chrisbra/csv.vim'
+  " CSV
+  Plug 'chrisbra/csv.vim'
 
   " Git
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
   Plug 'rbong/vim-flog'
-	Plug 'APZelos/blamer.nvim'
+  Plug 'APZelos/blamer.nvim'
 
-	"LSP setup
-	Plug 'williamboman/mason.nvim'
-	Plug 'williamboman/mason-lspconfig.nvim'
-	Plug 'neovim/nvim-lspconfig'
-	Plug 'mfussenegger/nvim-dap'
-	Plug 'hrsh7th/cmp-nvim-lsp'
-	Plug 'hrsh7th/cmp-buffer'
-	Plug 'hrsh7th/cmp-path'
-	Plug 'hrsh7th/cmp-cmdline'
-	Plug 'hrsh7th/nvim-cmp'
-	Plug 'saadparwaiz1/cmp_luasnip'
+  "LSP setup
+  Plug 'williamboman/mason.nvim'
+  Plug 'williamboman/mason-lspconfig.nvim'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'mfussenegger/nvim-dap'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'saadparwaiz1/cmp_luasnip'
   Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 
 	"Distraction free stuff
@@ -54,7 +55,7 @@ call plug#begin()
   Plug 'mbbill/undotree'
 
   "Statuslines
-	Plug 'nvim-lualine/lualine.nvim'
+  Plug 'nvim-lualine/lualine.nvim'
   Plug 'koenverburg/minimal-tabline.nvim'
 
   " Plug 'funorpain/vim-cpplint'
@@ -65,9 +66,9 @@ call plug#begin()
   Plug 'NMAC427/guess-indent.nvim'
 
   Plug 'LunarWatcher/auto-pairs'
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-	Plug 'ntpeters/vim-better-whitespace'
-	Plug 'rr-/vim-hexdec'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'ntpeters/vim-better-whitespace'
+  Plug 'rr-/vim-hexdec'
 
   Plug 'ggandor/leap.nvim'
 
@@ -136,6 +137,7 @@ luafile ~/.config/nvim/luafiles/lualine.lua
 luafile ~/.config/nvim/luafiles/treesitter.lua
 luafile ~/.config/nvim/luafiles/telescope.lua
 "luafile ~/.config/nvim/gitsigns.lua
+luafile ~/.config/nvim/luafiles/project.lua
 
 luafile ~/.config/nvim/luafiles/mason.lua
 luafile ~/.config/nvim/luafiles/leap.lua
