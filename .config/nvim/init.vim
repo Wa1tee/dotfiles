@@ -20,6 +20,8 @@ call plug#begin()
   " Plug 'yegappan/taglist'
   " Plug 'dhananjaylatkar/cscope_maps.nvim'
 
+  Plug 'aaditeynair/conduct.nvim'
+  Plug 'gcmt/taboo.vim'
 
   " CSV
   Plug 'chrisbra/csv.vim'
@@ -126,6 +128,7 @@ set updatetime=300
 set ignorecase
 
 " autocmd BufRead *.c map <F7> :w<enter>:!cpplint %<CR>
+set sessionoptions+=tabpages,globals
 
 
 " luafile ~/.config/nvim/luafiles/general.lua
@@ -148,8 +151,12 @@ luafile ~/.config/nvim/luafiles/indent.lua
 " luafile ~/.config/nvim/luafiles/neorg.lua
 luafile ~/.config/nvim/luafiles/colorschemes.lua
 
+luafile ~/.config/nvim/luafiles/conduct.lua
+
 " source ~/.config/nvim/vimfiles/cctree.vim
 
+source ~/.config/nvim/vimfiles/vimwiki.vim
+source ~/.config/nvim/vimfiles/projects.vim
 
 " Visualize tabs
 set listchars=tab:▷▷
