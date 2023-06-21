@@ -1,33 +1,6 @@
 set encoding=utf-8
-call plug#begin()
-    Plug 'kovisoft/paredit'
-    Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'scrooloose/nerdtree'
-    Plug 'preservim/nerdcommenter'
-    Plug 'godlygeek/tabular'
-    Plug 'itchyny/lightline.vim'
-    Plug 'tpope/vim-surround'
-    Plug 'machakann/vim-highlightedyank'
-    Plug 'phanviet/vim-monokai-pro'
-    Plug 'nathanaelkane/vim-indent-guides'
-    "
-    " Python specific
-    Plug 'tmhedberg/SimpylFold'
-    Plug 'nvie/vim-flake8'
-    "
-    " C++ specific
-    Plug 'majutsushi/tagbar'
-    " CSV
-    Plug 'chrisbra/csv.vim'
-    " Git
-    Plug 'airblade/vim-gitgutter'
-    Plug 'tpope/vim-fugitive'
 
-call plug#end()
-
-colorscheme monokai_pro
-
-set termguicolors
+colorscheme elflord
 
 filetype plugin on
 syntax on
@@ -80,15 +53,6 @@ set wildmode=longest,list,full
 set wildmenu
 set completeopt+=longest
 
-
-
-" Lightline
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \}
-set laststatus=2
-
-
 " Enable folding
 " set foldmethod=indent
 " set foldlevel=99
@@ -97,7 +61,6 @@ set laststatus=2
 " nnoremap <space> za
 
 " Ignore unnecessary files in nerdtree
-let NERDTreeIgnore=['\.png$']
 
 """"""""""" Custom keymaps """"""""""""""""""""""""
 
@@ -108,9 +71,6 @@ noremap <Leader><Leader><Tab> :set invlist<CR>
 
 " yank full path to current file into the system clipboard *
 noremap <silent> <Leader><Leader>p :let @* =expand("%:p")<CR>1<c-g>
-
-" Toggle NERDTree with ctrl+n
-map <C-n> :NERDTreeToggle<CR>
 
 nmap <leader><leader>v :source $MYVIMRC<CR>
 nmap <s-Y> y$
