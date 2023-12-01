@@ -4,6 +4,8 @@ call plug#begin()
   Plug 'phanviet/vim-monokai-pro'
   Plug 'loctvl842/monokai-pro.nvim'
 
+  Plug 'christoomey/vim-tmux-navigator'
+
   Plug 'tpope/vim-surround'
   Plug 'scrooloose/nerdtree'
   Plug 'godlygeek/tabular'
@@ -12,9 +14,9 @@ call plug#begin()
 
   Plug 'vimwiki/vimwiki'
 
-  " Plug 'nvim-neorg/neorg'
-  
-  Plug 'ahmedkhalf/project.nvim'
+  Plug 'stevearc/oil.nvim'
+  Plug 'nvim-neorg/neorg'
+
 
   " Plug 'hari-rangarajan/CCTree/'
   " Plug 'yegappan/taglist'
@@ -45,7 +47,7 @@ call plug#begin()
   Plug 'saadparwaiz1/cmp_luasnip'
   Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 
-	"Distraction free stuff
+  "Distraction free stuff
   "Plug 'junegunn/limelight.vim'
   Plug 'junegunn/goyo.vim'
 
@@ -140,7 +142,7 @@ luafile ~/.config/nvim/luafiles/lualine.lua
 luafile ~/.config/nvim/luafiles/treesitter.lua
 luafile ~/.config/nvim/luafiles/telescope.lua
 "luafile ~/.config/nvim/gitsigns.lua
-luafile ~/.config/nvim/luafiles/project.lua
+" luafile ~/.config/nvim/luafiles/project.lua
 
 luafile ~/.config/nvim/luafiles/mason.lua
 luafile ~/.config/nvim/luafiles/leap.lua
@@ -148,16 +150,17 @@ luafile ~/.config/nvim/luafiles/leap.lua
 luafile ~/.config/nvim/luafiles/lsp.lua
 " luafile ~/.config/nvim/luafiles/guess.lua
 luafile ~/.config/nvim/luafiles/indent.lua
-" luafile ~/.config/nvim/luafiles/neorg.lua
+luafile ~/.config/nvim/luafiles/neorg.lua
 luafile ~/.config/nvim/luafiles/colorschemes.lua
+luafile ~/.config/nvim/luafiles/oil_cfg.lua
 
-luafile ~/.config/nvim/luafiles/conduct.lua
+" luafile ~/.config/nvim/luafiles/conduct.lua
 
 " source ~/.config/nvim/vimfiles/cctree.vim
 
 source ~/.config/nvim/vimfiles/vimwiki.vim
-source ~/.config/nvim/vimfiles/projects.vim
-
+source ~/.config/nvim/vimfiles/functions.vim
+" source ~/.config/nvim/vimfiles/projects.vim
 " Visualize tabs
 set listchars=tab:▷▷
 set invlist
