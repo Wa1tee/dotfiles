@@ -62,7 +62,7 @@ txtrst='\e[0m'    # Text Reset
 
 
 # Prompt variables
-PROMPT_BEFORE="$txtcyn\h:$txtwht\w$txtrst"
+PROMPT_BEFORE="$txtwht\w$txtrst"
 PROMPT_AFTER="\\n\\\$ "
 
 # Prompt command
@@ -80,13 +80,14 @@ export GIT_PS1_SHOWCOLORHINTS="true"
 
 alias pers="source ~/.bashrc"
 alias explorer="xdg-open"
+alias exp="xdg-open"
 alias py="python3"
 
 source ~/.git-prompt.sh
 
 unset rc
 
-export PICO_SDK_PATH=/home/waitee/koodit/pico-sdk
+export PICO_SDK_PATH=/opt/pico-sdk
 export CSCOPE_EDITOR=`which nvim`
 
 function parse_git_dirty {
