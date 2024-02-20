@@ -6,6 +6,7 @@ call plug#begin()
 
   Plug 'christoomey/vim-tmux-navigator'
 
+  Plug 'LunarWatcher/auto-pairs'
   Plug 'tpope/vim-surround'
   Plug 'scrooloose/nerdtree'
   Plug 'godlygeek/tabular'
@@ -17,10 +18,7 @@ call plug#begin()
   Plug 'stevearc/oil.nvim'
   Plug 'nvim-neorg/neorg'
 
-
-  " Plug 'hari-rangarajan/CCTree/'
-  " Plug 'yegappan/taglist'
-  " Plug 'dhananjaylatkar/cscope_maps.nvim'
+  Plug 'ibhagwan/fzf-lua'
 
   Plug 'aaditeynair/conduct.nvim'
   Plug 'gcmt/taboo.vim'
@@ -69,7 +67,6 @@ call plug#begin()
 
   Plug 'NMAC427/guess-indent.nvim'
 
-  Plug 'LunarWatcher/auto-pairs'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'rr-/vim-hexdec'
@@ -160,14 +157,8 @@ luafile ~/.config/nvim/luafiles/oil_cfg.lua
 
 source ~/.config/nvim/vimfiles/vimwiki.vim
 source ~/.config/nvim/vimfiles/functions.vim
+source ~/.config/nvim/vimfiles/keymaps.vim
 " source ~/.config/nvim/vimfiles/projects.vim
-" Visualize tabs
-set listchars=tab:▷▷
-set invlist
-noremap <Leader><Leader><Tab> :set invlist<CR>
-
-" yank full path to current file into the system clipboard *
-noremap <silent> <Leader><Leader>p :let @* =expand("%:p")<CR>1<c-g>
 
 " :%s/search/replace/ without the g-flag in the end
 set nogdefault
