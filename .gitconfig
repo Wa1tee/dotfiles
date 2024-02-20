@@ -1,6 +1,6 @@
 [user]
-	name = John Doe
-	email = john.doe@domain.com
+	name = Antti Auranen
+	email =
 [push]
 	default = simple
 [diff]
@@ -29,3 +29,6 @@
 	ui = auto
 [pull]
 	rebase = false
+[safe]
+	directory = /opt/pico-sdk/
+	directory = /opt/pico-sdk
